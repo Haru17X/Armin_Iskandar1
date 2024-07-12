@@ -1,0 +1,183 @@
+<!-- homepage.html -->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>AnimeIsLife</title>
+  <style>
+    /* Global Styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-image: linear-gradient(to bottom, #87CEEB, #6495ED); /* Soft blue sky */
+    }
+
+    /* Header Styles */
+    header {
+      background-color: #228B22; /* Forest green */
+      color: #fff;
+      padding: 1.5em;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      position: fixed; /* Fix header to top */
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1; /* Ensure header is on top of other elements */
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+    /* Button Styles */
+    #wishlist-button,
+    #genre-button,
+    #search-button {
+      background-color: #228B22; /* Forest green */
+      color: lightskyblue;
+      border: none;
+      padding: 0.5em 1em;
+      font-size: 1em;
+      cursor: pointer;
+      border-radius: 4px;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    }
+
+    #wishlist-button:hover,
+    #genre-button:hover,
+    #search-button:hover {
+      background-color: #2E865F; /* Darker forest green */
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Main Styles */
+    main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 3em;
+      margin: 2em;
+      overflow-y: auto; /* Allow main content to scroll */
+    }
+
+    section {
+      margin-bottom: 2em;
+    }
+
+    /* Trending Anime Grid Styles */
+    #trending-anime-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+
+    .trending-anime-card {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .trending-anime-card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px 10px 0 0;
+    }
+
+    .trending-anime-card h3 {
+      margin-top: 0;
+      font-size: 1.2em;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    /* Top Anime Table Styles */
+    #top-anime-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    #top-anime-table th,
+    #top-anime-table td {
+      border: 1px solid #ddd;
+      padding: 10px;
+      text-align: left;
+    }
+
+    /* Search Styles */
+    #search {
+      margin-top: 2em;
+    }
+
+    .search-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+
+    .search-card {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .search-card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px 10px 0 0;
+    }
+
+    .search-card h3 {
+      margin-top: 0;
+      font-size: 1.2em;
+      font-weight: bold;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>AnimeIsLife</h1>
+    <button id="wishlist-button">Wishlist</button>
+    <button id="genre-button">Genre</button>
+  </header>
+  <main>
+    <section id="search">
+      <input id="search-input" type="text" placeholder="Search anime...">
+      <button id="search-button">Search</button>
+      <div id="search-results"></div>
+    </section>
+    <section id="trending-anime">
+      <h2>Trending Anime</h2>
+      <div id="trending-anime-grid">
+        <!-- Anime cards will be rendered here -->
+      </div>
+    </section>
+    <section id="top-anime">
+      <h2>Top Anime</h2>
+      <table id="top-anime-table">
+        <tr>
+          <th>Airing</th>
+          <th>Popular</th>
+          <th>Favourite</th>
+          <th>Latest Completed</th>
+        </tr>
+        <tbody id="top-anime-data"></tbody>
+      </table>
+    </section>
+  </main>
+  <footer>
+  </footer>
+  <script src="homepage.js"></script>
+</body>
+
+</html>

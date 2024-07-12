@@ -1,0 +1,58 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: aqua;
+  }
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+  }
+  
+  header h1 {
+    margin: 0;
+  }
+  
+  #back-button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 0.5em 1em;
+    font-size: 1em;
+    cursor: pointer;
+  }
+  
+  #back-button:hover {
+    background-color: #444;
+  }
+  
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em;
+  }
+  
+  #wishlist {
+    margin-bottom: 2em;
+  }
+  
+  #wishlist-ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  #wishlist-ul li {
+    margin-bottom: 10px;
+  }
+  
+  #wishlist-ul li img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
